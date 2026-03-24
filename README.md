@@ -4,7 +4,7 @@
 
 ## 📸 Preview
 
-![Preview do Projeto](./imagem/Foto profissional.png)
+![Preview do Projeto](./imagem/foto.png)
 
 ---
 
