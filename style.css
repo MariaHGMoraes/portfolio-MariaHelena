@@ -1,0 +1,301 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+
+    
+    background: linear-gradient(
+        120deg,
+        #0a0a0a 0%,
+        #0d0d0d 40%,
+        #1a0f0f 100%
+    );
+}
+
+/* Configuração de menu */
+nav {
+    background: rgba(0, 0, 0, 0.85);
+    position: fixed;
+    width: 100%;
+    padding: 15px;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(6px);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff2a2a;
+}
+
+/* Botão de escolha do tema */
+#toggleTema {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    background: #ff2a2a;
+    border: 1px solid #ff2a2a;
+    color: #ff2a2a;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Primeira pagina */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    height: 100vh;
+    padding: 40px;
+}
+
+
+.texto {
+    max-width: 500px;
+}
+
+.texto h1 {
+    font-size: 55px;
+    margin: 10px 0;
+    color: #ff2a2a;
+}
+
+.texto p {
+    text-align: justify;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+/* Estilização para destaque da imagem, para dar enfase no protagonismo do postfólio */
+.imagem {
+    display: flex;
+    justify-content: center;
+}
+
+.imagem img {
+    width: 300px;
+    border-radius: 12px;
+
+    
+    border: 2px solid rgba(255, 0, 0, 0.4);
+
+    
+    box-shadow: 
+        0 0 20px rgba(255, 0, 0, 0.4),
+        0 0 40px rgba(255, 0, 0, 0.2);
+
+    transform: translateX(-20px);
+    transition: 0.3s;
+}
+
+
+.imagem img:hover {
+    transform: translateX(-20px) scale(1.03);
+
+    box-shadow: 
+        0 0 30px rgba(255, 0, 0, 0.6),
+        0 0 60px rgba(255, 0, 0, 0.3);
+}
+
+
+section {
+    padding: 120px 40px;
+}
+
+
+h1 {
+    color: #ff2a2a;
+}
+
+
+.formacao-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-left: 3px solid #ff2a2a;
+}
+
+.formacao-item h2 {
+    margin: 0;
+}
+
+.formacao-item p {
+    margin: 5px 0;
+    color: #ccc;
+}
+
+
+.projeto {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 3px solid #ff2a2a;
+}
+
+.projeto p {
+    color: #ccc;
+}
+
+.projeto a {
+    color: #ff2a2a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.projeto a:hover {
+    text-decoration: underline;
+}
+
+
+.info-contato {
+    margin-bottom: 30px;
+}
+
+.info-contato p {
+    margin: 10px 0;
+}
+
+.info-contato a {
+    color: #ff2a2a;
+    text-decoration: none;
+}
+
+.info-contato a:hover {
+    text-decoration: underline;
+}
+
+/* Forms */
+form input,
+form textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+form button {
+    padding: 10px 20px;
+    background: #ff2a2a;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #cc0000;
+}
+
+/* Configuração do light mode*/
+.light-mode {
+    background: #f5f5f5;
+    color: #111;
+}
+
+.light-mode nav {
+    background: #ffffff;
+}
+
+.light-mode nav a {
+    color: #111;
+}
+
+.light-mode h1 {
+    color: #cc0000;
+}
+
+.light-mode .texto p,
+.light-mode .formacao-item p,
+.light-mode .projeto p {
+    color: #333;
+}
+
+.light-mode .imagem img {
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border: 2px solid rgba(0,0,0,0.2);
+}
+
+/* ========================= */
+/* Configuração da responsividade para smartphoes*/
+/* ========================= */
+@media (max-width: 768px) {
+
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #toggleTema {
+        top: 10px;
+        right: 10px;
+    }
+
+  
+nav {
+    position: relative; 
+}
+
+
+.hero {
+    padding-top: 40px; }
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        height: auto;
+        padding-top: 120px;
+    }
+
+    .texto {
+        max-width: 100%;
+    }
+
+    .texto h1 {
+        font-size: 32px;
+    }
+
+    .texto p {
+        font-size: 14px;
+    }
+
+    .imagem img {
+        width: 220px;
+        transform: none; 
+    }
+
+    
+    section {
+        padding: 80px 20px;
+    }
+
+   
+    form input,
+    form textarea {
+        width: 100%;
+    }
+
+}
